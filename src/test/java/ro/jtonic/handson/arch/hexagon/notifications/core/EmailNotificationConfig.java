@@ -1,13 +1,12 @@
 package ro.jtonic.handson.arch.hexagon.notifications.core;
 
+import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import ro.jtonic.handson.arch.hexagon.notifications.core.api.DefaultEmailNotificationService;
 import ro.jtonic.handson.arch.hexagon.notifications.core.api.EmailNotificationService;
 import ro.jtonic.handson.arch.hexagon.notifications.core.spi.EmailNotificationRepository;
 
-@Configuration
+@TestConfiguration
 public class EmailNotificationConfig {
 
     @Bean
@@ -16,7 +15,6 @@ public class EmailNotificationConfig {
     }
 
     @Bean
-    @Profile("mock")
     public EmailNotificationRepository emailNotificationRepository() {
         return notification -> System.out.println("Saving....");
     }
