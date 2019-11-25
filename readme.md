@@ -28,6 +28,22 @@ Is it ok to use a java specification for validation (could it be consider a good
     - for this, proxy based support is needed, and spring offers a good support for this through AOP? 
     How hard is to keep all of this outside the hexagon with having hexagon internal to be bound to a specific library/framework. 
 - does the command pattern fit this technology or it brings further complexity through further indirections
+- would it be better to have the following structure for the hexagon?
+
+```text
+- [d] core
+    - [d] boundary
+        - [d] api (stands for the driver port interface)
+        - [d] spi (stands for the driven port(s) interface(s))
+        - api implementation class
+    - [d] internal
+        - [d] exception
+        - [d] model
+        - other classes related to business logic such as commands and commands handlers
+```
+> __Notes:__
+> 
+> [d] stands for directory 
 
 ## Hexagonal architecture online references
 
