@@ -13,7 +13,7 @@ public class SimpleNotificationAppTest {
     final EmailNotificationRepository repository = notification -> System.out.printf("Saving %s", notification.getName());
     final EmailNotificationService emailNotificationService = new DefaultEmailNotificationService(
         repository);
-    final EmailNotification emailNotification = new EmailNotification("email notification");
+    final EmailNotification emailNotification = new EmailNotification("email notification", "email", "processed");
     final var driverAdapter = new SimpleDriverAdapter(emailNotificationService);
     driverAdapter.accept(emailNotification);
   }
