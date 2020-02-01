@@ -13,6 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class NotificationDto {
 
-  private String name;
+  private String firstName;
+  private String lastName;
   private String profileId;
 }

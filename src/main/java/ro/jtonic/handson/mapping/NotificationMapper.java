@@ -6,7 +6,8 @@ import org.mapstruct.Mapping;
 @Mapper
 public interface NotificationMapper {
 
-  @Mapping(source = "name", target = "lastName")
+  @Mapping(target = "fullName", expression = "java(notificationDto.getFirstName() + \" \" + notificationDto.getLastName())")
   @Mapping(source = "profileId", target = "profileId.id")
   Notification map(NotificationDto notificationDto);
+
 }
