@@ -6,16 +6,21 @@ import org.junit.jupiter.api.Test;
 
 class NotificationMapperTest {
 
+  public static final String NAME = "Pazargic";
   public static final String PROFILE_ID = "profileId";
 
   private static final NotificationMapper notificationMapper = new NotificationMapperImpl();
 
   @Test
   void map() {
-    final NotificationDto notificationDto = NotificationDto.builder().profileId(PROFILE_ID).build();
+    final NotificationDto notificationDto = NotificationDto.builder()
+        .name(NAME)
+        .profileId(PROFILE_ID)
+        .build();
     final Notification notification = notificationMapper
         .map(notificationDto);
 
+    assertEquals(notificationDto.getName(), notification.getLastName());
     assertEquals(notificationDto.getProfileId(), notification.getProfileId().getId());
   }
 }

@@ -11,8 +11,9 @@ It is based on annotation processing tool - [APT](https://docs.oracle.com/javase
     - [x] maven
     - [x] intellij idea (rebuild the project whenever there is a modification to mapped java beans)
 - [x] mapping values on different beans hierarchy depths (same type, same name)
-- [ ] Works fine with different names same type
+- [x] Works fine with different names same type
 - [ ] Running tests in spring containers slicing only the mapper bean
+- [ ] 2 fields as source map in one field as target (firstName, lastName -> fullName)
 - [ ] Works fine with classes generated for avro schema
 - [ ] Works fine with different type field mapping
     - [ ] String <-> int
