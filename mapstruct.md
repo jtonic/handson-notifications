@@ -14,7 +14,8 @@ It is based on annotation processing tool - [APT](https://docs.oracle.com/javase
 - [x] Works fine with different names same type
 - [x] 2 fields as source map in one field as target (firstName, lastName -> fullName)
 - [x] 2 fields as source map in one field as target (firstName, lastName -> fullName) - with @AfterMapping
-- [ ] Running tests in spring containers slicing only the mapper bean
+- [x] Running tests in spring containers slicing only the mapper bean
+- [ ] Simple/Multiple 'uses' in the same mapping
 - [ ] Works fine with classes generated for avro schema
 - [ ] Works fine with different type field mapping
     - [ ] String <-> int
@@ -22,7 +23,6 @@ It is based on annotation processing tool - [APT](https://docs.oracle.com/javase
     - [ ] String <-> URI
     - [ ] String <-> custom type - Person
     - [ ] String <-> collection
-- [ ] Simple/Multiple 'uses' in the same mapping
 - [ ] ... 
 
 ## Useful links
