@@ -8,6 +8,7 @@ import lombok.Getter;
 public class PersonDto {
 
   private final String name;
-
   private final String gender;
+  private final AddressDto address;
+  private final PhoneDto phone;
 }

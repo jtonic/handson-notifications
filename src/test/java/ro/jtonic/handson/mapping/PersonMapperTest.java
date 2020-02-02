@@ -8,7 +8,10 @@ class PersonMapperTest {
   @Test
   void map() {
 
-    PersonMapper mapper = new PersonMapperImpl();
+    AddressMapper addressMapper = new AddressMapperImpl();
+    PhoneMapper phoneMapper = new PhoneMapperImpl();
+
+    PersonMapper mapper = new PersonMapperImpl(addressMapper, phoneMapper);
     final PersonDto personDto = PersonDto.builder().name("Antonel-Ernest Pazargic").gender("male").build();
     final Person person = mapper.map(personDto);
 

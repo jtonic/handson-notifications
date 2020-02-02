@@ -18,7 +18,7 @@ It is based on annotation processing tool - [APT](https://docs.oracle.com/javase
 - [ ] Favour immutability of the models
     - [x] Simple model example
     - [x] Notification based example   
-- [ ] Simple/Multiple 'uses' in the same mapping
+- [x] dependency injection of many mappers in another mapper
 - [ ] Works fine with classes generated for avro schema
 - [ ] Works fine with different type field mapping
     - [ ] String <-> Locale
