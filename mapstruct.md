@@ -17,7 +17,7 @@ It is based on annotation processing tool - [APT](https://docs.oracle.com/javase
 - [x] Running tests in spring containers slicing only the mapper bean
 - [ ] Favour immutability of the models
     - [x] Simple model example
-    - [ ] Notification based example   
+    - [x] Notification based example   
 - [ ] Simple/Multiple 'uses' in the same mapping
 - [ ] Works fine with classes generated for avro schema
 - [ ] Works fine with different type field mapping
@@ -28,6 +28,12 @@ It is based on annotation processing tool - [APT](https://docs.oracle.com/javase
     - [ ] String <-> custom type - Person
     - [ ] String <-> collection
 - [ ] ... 
+
+## (still) issues
+
+- `@AfterMapping` doesn't work with immutable beans and builders
+- Immutable builder based mapping doesn't work when using mapper to update the target
+     See the issue [here](https://github.com/mapstruct/mapstruct/issues/1997). In 1.4.0 most probably this issue is gonna be fixed.
 
 ## Useful links
 
