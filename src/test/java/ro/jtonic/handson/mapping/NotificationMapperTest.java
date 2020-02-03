@@ -1,7 +1,8 @@
 package ro.jtonic.handson.mapping;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.Set;
 import org.junit.jupiter.api.Test;
 
 class NotificationMapperTest {
@@ -9,6 +10,8 @@ class NotificationMapperTest {
   private static final String FIRST_NAME = "Antonel-Ernest";
   public static final String LAST_NAME = "Pazargic";
   public static final String PROFILE_ID = "profileId";
+  public static final String LOCALE1 = "en_US";
+  public static final String LOCALE2 = "en-US";
 
   private static final NotificationMapper notificationMapper = new NotificationMapperImpl();
 
@@ -18,11 +21,13 @@ class NotificationMapperTest {
         .firstName(FIRST_NAME)
         .lastName(LAST_NAME)
         .profileId(PROFILE_ID)
+        .locale(LOCALE2)
         .build();
     final Notification notification = notificationMapper
         .map(notificationDto);
 
-    assertEquals(notificationDto.getFirstName() + " " + notificationDto.getLastName(), notification.getFullName());
-    assertEquals(notificationDto.getProfileId(), notification.getProfileId().getId());
+    assertThat(notificationDto.getFirstName() + " " + notificationDto.getLastName()).isEqualTo(notification.getFullName());
+    assertThat(notificationDto.getProfileId()).isEqualTo(notification.getProfileId().getId());
+    assertThat(Set.of(LOCALE1, LOCALE2)).contains(notification.getLocale().toString());
   }
 }

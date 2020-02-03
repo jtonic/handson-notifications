@@ -7,7 +7,8 @@ import lombok.Getter;
 @Builder
 public class NotificationDto {
 
-  private String firstName;
-  private String lastName;
-  private String profileId;
+  private final String firstName;
+  private final String lastName;
+  private final String profileId;
+  private final String locale;
 }

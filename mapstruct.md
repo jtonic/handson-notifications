@@ -15,13 +15,17 @@ It is based on annotation processing tool - [APT](https://docs.oracle.com/javase
 - [x] 2 fields as source map in one field as target (firstName, lastName -> fullName)
 - [x] 2 fields as source map in one field as target (firstName, lastName -> fullName) - with @AfterMapping
 - [x] Running tests in spring containers slicing only the mapper bean
-- [ ] Favour immutability of the models
+- [x] Favour immutability of the models
     - [x] Simple model example
     - [x] Notification based example   
 - [x] dependency injection of many mappers in another mapper
+- [ ] JsonNode mapping
 - [ ] Works fine with classes generated for avro schema
+- [ ] collections mapping
+    - [ ] map 
+- [ ] Generics collections
 - [ ] Works fine with different type field mapping
-    - [ ] String <-> Locale
+    - [x] String <-> Locale
     - [ ] String <-> int
     - [ ] String <-> Integer
     - [ ] String <-> URI
