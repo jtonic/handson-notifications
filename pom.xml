@@ -107,4 +107,11 @@
 		</plugins>
 	</build>
 
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/jtonic/handson-notifications</url>
+		</repository>
+	</distributionManagement>
 </project>
