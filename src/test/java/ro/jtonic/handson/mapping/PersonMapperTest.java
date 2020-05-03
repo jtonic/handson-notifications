@@ -2,6 +2,7 @@ package ro.jtonic.handson.mapping;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 import static ro.jtonic.handson.mapping.Person.ID_DEFAULT;
 import static ro.jtonic.handson.mapping.Person.STATUS_DEFAULT;
 
@@ -31,5 +32,10 @@ class PersonMapperTest {
     assertThat(person.getName()).isEqualTo(personDto.getName());
     assertThat(person.getId()).isEqualTo(ID_DEFAULT);
     assertThat(person.getStatus()).isEqualTo(STATUS_DEFAULT);
+  }
+
+  @Test
+  void testGithubActionFailure() {
+    fail("Force fail the github workflow");
   }
 }
