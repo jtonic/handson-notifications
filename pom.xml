@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>ro.jtonic.handson.arch</groupId>
 	<artifactId>handson-notifications</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<name>notifications</name>
 	<description>Notifications</description>
 
